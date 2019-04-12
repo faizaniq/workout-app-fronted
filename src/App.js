@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
+import NavBar from './components/NavBar'
+import MainContainer from './containers/MainContainer'
+import Login from './components/Login'
+
 
 class App extends Component {
 
-  state = {
-    workouts: []
-  }
-
-  componentDidMount(){
-    fetch('http://localhost:3001/workouts')
-    .then(res => res.json())
-    .then(workouts => this.setState({workouts}))
-  }
-
-
   render() {
-    console.log(this.state.workouts )
     return (
-      <h1>hello</h1>
+      <div>
+        <NavBar />
+        <Login />
+        <MainContainer />
+      </div>
     );
   }
 }
