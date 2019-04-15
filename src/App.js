@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import NavBar from './components/NavBar'
 import MainContainer from './containers/MainContainer'
-import Login from './components/Login'
+import CreateAccountForm from './components/CreateAccountForm'
 
 
 class App extends Component {
@@ -11,7 +11,6 @@ class App extends Component {
     return (
       <div>
         <NavBar />
-        <Login />
         <MainContainer />
       </div>
     );

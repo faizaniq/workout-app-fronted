@@ -4,10 +4,18 @@ class AddWorkoutForm extends Component {
 
   state = {
     name: '',
-    body_part: [''],
+    body_part: '',
     sets: '',
     reps: ''
   }
+
+  // changeHandler = (e) => {
+  //   if (e.target.name === 'body_part') {
+  //     this.setState({body_part: [...this.state.body_part, e.target.value]})
+  //   }else {
+  //     this.setState({[e.target.name]: e.target.value})
+  //   }
+  // }
 
   changeHandler = (e) => {
     this.setState({[e.target.name]: e.target.value})
@@ -32,7 +40,7 @@ class AddWorkoutForm extends Component {
           <input type='text' onChange={this.changeHandler} value={this.state.name} name='name' placeholder="Workout Name"/>
           <input type='text' onChange={this.changeHandler} value={this.state.body_part} name='body_part' placeholder="Focus Areas"/>
           <input type='text' onChange={this.changeHandler} value={this.state.sets} name='sets' placeholder="Sets"/>
-          <input type='text' onChange={this.changeHandler} value={this.state.reps } name='reps' placeholder="Reps"/>
+          <input type='text' onChange={this.changeHandler} value={this.state.reps} name='reps' placeholder="Reps"/>
           <button>Add</button>
         </form>
       </div>

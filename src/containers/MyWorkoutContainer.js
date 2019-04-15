@@ -6,7 +6,7 @@ class MyWorkoutContainer extends Component {
 
   render() {
     console.log(this.props.myWorkouts)
-    let myWorkoutArray = this.props.myWorkouts.map(workout => <WorkoutCard key={workout.id} workout={workout} clickHandler={this.props.clickHandler}/>)
+    let myWorkoutArray = this.props.myWorkouts.map(workout => <WorkoutCard key={workout.id} workout={workout} clickHandler={this.props.clickHandler} deleteHandler={this.props.deleteHandler}/>)
     return(
       <div>
         <h1>My Workouts</h1>
